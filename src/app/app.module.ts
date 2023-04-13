@@ -12,6 +12,7 @@ import { HistoryComponent } from './components/history/history.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
+import { SearchService } from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { CardComponent } from './components/card/card.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
