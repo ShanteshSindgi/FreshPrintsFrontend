@@ -1,0 +1,17 @@
+<div class="container">
+  <app-searchbar (searchClick)="handleSearch($event)"></app-searchbar>
+  <br>
+  <div *ngIf="isLoading">
+    Loading...
+  </div>
+
+  <div *ngIf="noData">
+    No data found.
+  </div>
+  <div *ngIf="!isLoading && !noData && userData.length>0">
+    <div>
+      <h3>Search Results</h3>
+      <app-card *ngFor="let user of userData" [data]="user"></app-card>
+    </div>
+  </div>
+</div>

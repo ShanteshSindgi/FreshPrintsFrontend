@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div *ngIf="!data.length || data.length==0">
+    No Search history.
+  </div>
+  <div *ngIf="data.length > 0">
+    <h3>Search Results</h3>
+    <table ngbTable class="table">
+      <thead>
+        <tr>
+          <th>Search Term</th>
+          <th>Search Results</th>
+          <app-button (btnClick)="deleteRecords()" btnText="Delete History"></app-button>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of data">
+          <td>
+            {{user.searchTerm}}
+          </td>
+          <td>
+            <p *ngIf="user.searchHistory.length == 0">No Records found</p>
+            <app-card *ngFor="let history of user.searchHistory" [data]="history"></app-card>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

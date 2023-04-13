@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.form-control {
+  max-width: 400px;
+}
+
+.input-group-append {
+  margin-left: -1px;
+}
