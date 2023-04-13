@@ -5,7 +5,10 @@ import { UsersComponent } from './components/users/users.component';
 import { HistoryComponent } from './components/history/history.component';
 
 const routes: Routes = [
-
+  {
+    path: "",
+    component: UsersComponent
+  },
   {
     path: "users", component: UsersComponent
   },
