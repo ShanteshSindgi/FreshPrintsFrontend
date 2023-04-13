@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchType } from 'src/app/Types/historyTypes';
+import { SearchType } from '../../Types/historyTypes';
 
 @Component({
   selector: 'app-history',
